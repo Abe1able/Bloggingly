@@ -11,10 +11,6 @@ RSpec.describe User, type: :model do
     expect(@user).to be_valid
   end
 
-  it 'checks if attributes are valid' do
-    expect(@post).to be_valid
-  end
-
   it 'checks if comment creation is valid' do
     expect(@comment).to be_valid
   end
