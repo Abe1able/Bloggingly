@@ -1,2 +1,17 @@
-<h1>Posts#show</h1>
-<h2>This is the posts show page</h2>
+<div class="main-container">
+	<div class="post-container">
+		<h2><%= @post.title %> by <%= @post.author.name %></h2>
+		<h6>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h6>
+		<p class="post-text"><%= @post.text %></p>
+	</div>
+
+	<div class="comments-cont">
+		<% if @post.all_comments.count.zero? %>
+		<p>Post has no comments yet</p>
+		<%else%>
+		<% @post.all_comments.each do |comment| %>
+			<p><%= comment.author.name %>: <%= comment.text %></p>
+		<% end %>
+		<% end %>
+	</div>
+</div>
