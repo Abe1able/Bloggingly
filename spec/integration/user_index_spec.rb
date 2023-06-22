@@ -32,4 +32,10 @@ RSpec.describe 'User Page Index', type: :feature do
   it 'shows the users posts' do
     expect(page).to have_content('Number of posts: 3')
   end
+
+  it 'redirects to users show page' do
+    click_on 'Tommy'
+    expect(page).to have_current_path user_path(@tom)
+    expect(page).to have_content('Teacher')
+  end
 end
