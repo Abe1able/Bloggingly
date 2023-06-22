@@ -1,2 +1,13 @@
-<h1>Users#index</h1>
-<h2>This is the Users index page</h2>
+<div class="main-container">
+	<% @users.each do |user| %>
+		<div class="users-wrapper flex">
+			<div class="img-cont">
+				<%= image_tag user.photo, :size => "50x50", alt: "user photo" %>
+			</div>
+			<div class="user-details">
+				<h2><%= link_to user.name, user, class: "link-button"  %></h2>
+      			<p>Number of posts: <%= user.posts_counter %></p>
+			</div>
+		</div>
+	<%end%>
+</div>

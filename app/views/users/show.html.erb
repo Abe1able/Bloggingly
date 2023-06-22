@@ -1,2 +1,36 @@
-<h1>Users#show</h1>
-<h2>This is the Users show page</h2>
+<div class="main-container flex">
+ <div class="users-wrapper flex">
+    <div class="img-cont">
+      <%= image_tag @user.photo, :size => "50x50", alt: "user photo" %>
+    </div>
+    <div class="user-details">
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @user.posts_counter %></p>
+    </div>
+ </div>
+
+ <div class="user-bio">
+   <h3>Bio</h3>
+   <p><%= @user.bio %></p>
+ </div>
+
+ <div class="user-posts">
+   <% if @user.three_posts.count.zero? %>
+   <p>User has no posts yet</p>
+   <% else %>
+   <% @user.three_posts.each do |post| %>
+   <%= link_to user_post_path(@user.id, post.id), {:class => "link-button"} do %>
+     <div class="users-post">
+       <h2><%= post.title %></h2>
+       <p><%= post.text %></p>
+       <h4>Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter %></h4>
+     </div>
+     <% end %>
+     <% end %>
+    <% end %>
+
+    <button>
+      <%= link_to "See all posts", user_posts_path(@user), class: "link-button" %>
+    </button>
+ <div>
+</div>
