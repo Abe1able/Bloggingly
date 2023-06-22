@@ -105,6 +105,12 @@ To run the project, execute the following command:
 - GitHub: [GitHub](https://github.com/Abe1able)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abel-seifu/)
 
+👤 **Nicholas Kwamena Amissah** <a name="authors"></a>
+
+- GitHub: [Nicholas Amissah](https://github.com/atok624)
+- Twitter: [Nicholas Amissah](https://twitter.com/MysticalAmissah)
+- LinkedIn: [Nicholas Amissah](https://www.linkedin.com/in/nicholas-amissah-153b09154)
+
 
 
 <p align="right"><a href="#readme-top">back to top</a></p>

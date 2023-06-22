@@ -33,9 +33,3 @@ RSpec.describe 'User Page Index', type: :feature do
     expect(page).to have_content('Number of posts: 3')
   end
 end
-
-
-
-
-
-
