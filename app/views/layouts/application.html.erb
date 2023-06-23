@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "main" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="flex gap-16 w-full justify-end mr-10">
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "link-button" %>
+      <% unless user_signed_in? %>
+      <button>
+        <%= link_to "Log in", new_user_session_path, class: "link-button"%>
+      </button>
+      <% end %>
+      </div>
     <%= yield %>
   </body>
 </html>

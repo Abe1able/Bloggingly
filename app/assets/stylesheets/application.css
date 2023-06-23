@@ -59,6 +59,13 @@ body {
   text-align: end;
 }
 
+button {
+  background-color: chartreuse;
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
 .user-posts > button {
   margin-top: 1rem;
   margin-left: 40%;
